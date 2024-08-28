@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Error</title>
+</head>
+
+<body>
+    <h1>Tenemos un error en el login!</h1>
+    <p th:if="${err}" th:text="${err}" style="color: red;"></p>
+    <a href="/login">Volver a la página de Login</a>
+</body>
+
+</html>
