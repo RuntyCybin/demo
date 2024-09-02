@@ -1,4 +1,4 @@
-package com.cybinmvc.demo;
+package com.cybinmvc.demo.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;

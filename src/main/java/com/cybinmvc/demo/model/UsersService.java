@@ -1,8 +1,6 @@
-package com.cybinmvc.demo;
+package com.cybinmvc.demo.model;
 
 import java.util.Optional;
-
-import com.cybinmvc.demo.Usuario;
 
 public interface UsersService {
 
