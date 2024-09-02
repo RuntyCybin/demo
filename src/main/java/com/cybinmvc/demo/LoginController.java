@@ -18,7 +18,7 @@ public class LoginController {
 
         model.addAttribute("titulo", "Login mvc");
         model.addAttribute("titulo_h1", "Bienvenido, prueba loguearte");
-
+        
         return "login";
     }
 
