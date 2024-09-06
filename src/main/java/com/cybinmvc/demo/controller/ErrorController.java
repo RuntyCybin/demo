@@ -11,15 +11,15 @@ import lombok.extern.slf4j.Slf4j;
 public class ErrorController {
     
     /**
-     * @param model
+     * @param model_error
      * @return
      */
     @GetMapping("/errlogin")
-    public String showErrorPage(Model model) {
+    public String showErrorPage(Model model_error) {
         // Comprobación de si el atributo "error" está presente en el modelo
-        if (model.containsAttribute("err")) {
+        if (model_error.containsAttribute("err")) {
             log.warn("warning", "Error Attribute Exists: "
-                    + model.getAttribute("error"));
+                    + model_error.getAttribute("error"));
         } else {
             log.warn("warning", "Error Attribute NOT Found!");
         }

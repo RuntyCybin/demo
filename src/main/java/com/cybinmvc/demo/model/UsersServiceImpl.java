@@ -11,15 +11,12 @@ public class UsersServiceImpl implements UsersService {
     UsersRepository repository;
 
     @Override
-    public boolean insertarUsuario(Usuario usuario) {
-        Boolean res = false;
-        Usuario usuarioGuardado = repository.save(usuario);
-
-        if (null != usuarioGuardado) {
-            res = Boolean.TRUE;
-        }
-
-        return res;
+    public void insertarUsuario(UsuarioInDto userDto) {
+        repository.save(Usuario.builder()
+                .email(userDto.getEmail())
+                .name(userDto.getName())
+                .pwd(userDto.getPwd())
+                .build());
     }
 
     @Override
@@ -29,7 +26,12 @@ public class UsersServiceImpl implements UsersService {
 
     @Override
     public Optional<Usuario> obtenerUsuarioPorNombre(String nombre) {
-        return repository.findByNombre(nombre);
+        return repository.findByName(nombre);
+    }
+
+    @Override
+    public Optional<Usuario> buscarUsuarioPorEmailYContrasenia(String email, String pass) {
+        return repository.findByEmailAndPwd(email, pass);
     }
 
 }

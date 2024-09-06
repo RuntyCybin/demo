@@ -8,7 +8,7 @@ public interface UsersService {
      * @param   usuario
      * @return  boolean true si inserto o false si no
      */
-    boolean insertarUsuario(Usuario usuario);
+    void insertarUsuario(UsuarioInDto userDto);
 
     /**
      * @param   idusuario
@@ -21,4 +21,11 @@ public interface UsersService {
      * @return  Optional de usuario
      */
     Optional<Usuario> obtenerUsuarioPorNombre(String nombre);
+
+    /**
+     * @param   email
+     * @param   pass
+     * @return  Optional de usuario
+     */
+    Optional<Usuario> buscarUsuarioPorEmailYContrasenia(String email, String pass);
 }

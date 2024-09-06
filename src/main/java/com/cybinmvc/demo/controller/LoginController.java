@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.cybinmvc.demo.model.UsersRepository;
 import com.cybinmvc.demo.model.UsersService;
 import com.cybinmvc.demo.model.Usuario;
 
@@ -48,21 +47,21 @@ public class LoginController {
             RedirectAttributes redirectAttributes,
             Model model_success) {
 
+        String msg = "";
         if (!email.isBlank() && !pwd.isBlank()) {
-            log.info("EMAIL: " + email + " PWD: " + pwd);
-
             Optional<Usuario> optUser = usersService
                     .buscarUsuarioPorEmailYContrasenia(email, pwd);
                     
             if (optUser.isPresent()) {
                 model_success.addAttribute("success", "Su email: " + email);
+                return "hello";
             }
-
-            return "hello";
+            msg = "Credenciales Incorrectas";
+        } else {
+            msg = "Credenciales vacias";
         }
 
-        log.error("error", "Credenciales vacias");
-        redirectAttributes.addFlashAttribute("err", "Credenciales vacias");
+        redirectAttributes.addFlashAttribute("err", msg);
         return "redirect:/errlogin";
     }
     
