@@ -28,8 +28,8 @@ public class LoginController {
      */
     @GetMapping("/login")
     public String hello(Model model) {
-        model.addAttribute("titulo", "Login mvc");
-        model.addAttribute("titulo_h1", "Bienvenido, prueba loguearte");
+        model.addAttribute("titulo", "Login");
+        model.addAttribute("titulo_h1", "Bienvenido");
         return "login";
     }
 
@@ -53,8 +53,10 @@ public class LoginController {
                     .buscarUsuarioPorEmailYContrasenia(email, pwd);
                     
             if (optUser.isPresent()) {
-                model_success.addAttribute("success", "Su email: " + email);
-                return "hello";
+                //model_success.addAttribute("success", "Su email: " + email);
+                //return "hello";
+                redirectAttributes.addFlashAttribute("success", "Su email: " + email);
+                return "redirect:/hello";
             }
             msg = "Credenciales Incorrectas";
         } else {
