@@ -1,4 +1,4 @@
-package com.cybinmvc.demo.model;
+package com.cybin.module.web.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

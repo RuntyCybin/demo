@@ -1,4 +1,4 @@
-package com.cybinmvc.demo.model;
+package com.cybin.module.web.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

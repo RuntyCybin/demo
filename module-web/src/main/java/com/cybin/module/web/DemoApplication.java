@@ -1,4 +1,4 @@
-package com.cybinmvc.demo;
+package com.cybin.module.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

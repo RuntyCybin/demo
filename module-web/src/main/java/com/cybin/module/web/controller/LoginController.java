@@ -1,4 +1,4 @@
-package com.cybinmvc.demo.controller;
+package com.cybin.module.web.controller;
 
 import java.util.Optional;
 
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.cybinmvc.demo.model.UsersService;
-import com.cybinmvc.demo.model.Usuario;
+import com.cybin.module.web.model.UsersService;
+import com.cybin.module.web.model.Usuario;
 
 import lombok.extern.slf4j.Slf4j;
 

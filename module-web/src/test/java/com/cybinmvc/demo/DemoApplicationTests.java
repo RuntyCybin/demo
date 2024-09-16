@@ -13,8 +13,8 @@ import org.junit.jupiter.api.TestInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.cybinmvc.demo.model.UsersRepository;
-import com.cybinmvc.demo.model.Usuario;
+import com.cybin.module.web.model.UsersRepository;
+import com.cybin.module.web.model.Usuario;
 
 @SpringBootTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)

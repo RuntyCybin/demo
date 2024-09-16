@@ -1,4 +1,4 @@
-package com.cybinmvc.demo.model;
+package com.cybin.module.web.model;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
